@@ -43,3 +43,12 @@ document.getElementById("back-to-top").onclick = function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
+// Seleciona o elemento do menu hambúrguer e o nav
+const menuHamburguer = document.querySelector('.menu-hamburguer');
+const nav = document.querySelector('nav');
+
+// Adiciona um evento de clique ao menu hambúrguer
+menuHamburguer.addEventListener('click', () => {
+    nav.classList.toggle('active'); // Alterna a classe "active" no nav
+});
+

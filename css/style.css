@@ -220,6 +220,8 @@ section {
     perspective: 1000px;
     width: 300px;
     height: 350px;
+    margin: auto;
+    margin-top: 10px;
 }
 
 .flip-card-inner {
@@ -409,6 +411,7 @@ nav a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     perspective: 1000px; /* Para o efeito de flip */
+    margin-top: 10px;
 }
 
 .contact-card:hover {
@@ -440,3 +443,4 @@ nav a:hover {
 .contact-card a:hover {
     color: #03DAC6; /* Cor do link ao passar o mouse */
 }
+
