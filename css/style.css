@@ -1,0 +1,442 @@
+/* Fontes Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #FFFFFF;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #1e1e1e;
+    padding: 50px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+header h1 {
+    font-size: 3em;
+    color: #BB86FC;
+    letter-spacing: 1px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+
+.section-title {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2.5em;
+    border-bottom: 2px solid #BB86FC;
+    display: inline-block;
+    padding-bottom: 10px;
+    animation: slideIn 1s ease-out;
+}
+
+section {
+    margin: 50px 10%;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.skill-card {
+    width: 200px;
+    height: 250px;
+    perspective: 1000px;
+    margin: 20px;
+}
+
+.skill-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.skill-card:hover .skill-card-inner {
+    transform: rotateY(180deg);
+}
+
+.skill-card-front, .skill-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-card-front {
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-card-front img {
+    width: 100px;
+    height: auto;
+}
+
+.skill-card-back {
+    background-color: #BB86FC;
+    color: #121212;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-card-back h3 {
+    font-size: 1.5em;
+}
+
+.skill-card-back p {
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.footer {
+    background-color: #1e1e1e;
+    padding: 20px;
+    text-align: center;
+    color: #BB86FC;
+    margin-top: 50px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.footer a {
+    color: #03DAC6;
+    text-decoration: none;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); }
+    to { transform: translateY(0); }
+}
+
+.skill-card-front i {
+    font-size: 4em;
+    color: #BB86FC;
+}
+
+.projects {
+    padding: 50px 0;
+    background-color: #1E1E1E;
+    color: #FFF;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #2D2D2D;
+    padding: 20px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-content h3 {
+    margin-top: 0;
+    font-size: 1.6rem;
+    color: #03DAC6;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.project-content p {
+    font-size: 1rem;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #BB86FC;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-align: center;
+}
+
+.project-link:hover {
+    color: #03DAC6;
+}
+
+@media (max-width: 768px) {
+    .project-content h3 {
+        font-size: 1.4rem;
+    }
+}
+
+
+.projects {
+    padding: 50px 0;
+    background-color: #1E1E1E;
+    color: #FFF;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    perspective: 1000px;
+    width: 300px;
+    height: 350px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.project-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.flip-card-front {
+    background-color: #2D2D2D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.flip-card-front img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.flip-card-front h3 {
+    color: #03DAC6;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.flip-card-back {
+    background-color: #2D2D2D;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.flip-card-back h3 {
+    color: #BB86FC;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.flip-card-back p {
+    text-align: center;
+    margin: 5px 0;
+}
+
+.project-link {
+    color: #03DAC6;
+    font-weight: bold;
+    margin-top: 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: #BB86FC;
+}
+
+.project-card .flip-card-front i {
+    font-size: 50px; /* Tamanho do ícone */
+    margin-bottom: 10px; /* Espaçamento abaixo do ícone */
+}
+
+header {
+    background-color: #1e1e1e;
+    padding: 50px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+header h1 {
+    font-size: 3em;
+    color: #BB86FC;
+    letter-spacing: 1px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #E0E0E0;
+    margin-top: 10px;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: #BB86FC;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+    padding: 10px 15px; /* Adiciona espaço em volta do texto */
+    border-radius: 5px; /* Cantos arredondados */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave para a cor de fundo e do texto */
+}
+
+nav a:hover {
+    background-color: #BB86FC; /* Cor de fundo ao passar o mouse */
+    color: #1e1e1e; /* Cor do texto ao passar o mouse */
+}
+
+/* Estilo para a navegação em dispositivos menores */
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column; /* Torna a navegação vertical em telas menores */
+        align-items: center;
+    }
+    nav a {
+        margin: 10px 0; /* Espaçamento vertical em vez de horizontal */
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent; /* Torna o fundo transparente */
+    border: none; /* Sem borda */
+    border-radius: 50%; /* Torna o botão redondo */
+    width: 50px; /* Largura do botão */
+    height: 50px; /* Altura do botão */
+    display: flex; /* Flexbox para centralizar conteúdo */
+    align-items: center; /* Alinhamento vertical */
+    justify-content: center; /* Alinhamento horizontal */
+    cursor: pointer; /* Cursor em forma de mão ao passar o mouse */
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+    transition: background-color 0.3s; /* Animação suave para cor de fundo */
+}
+
+#back-to-top i {
+    font-size: 24px; /* Ajuste o tamanho do ícone conforme necessário */
+    color: #BB86FC; /* Cor do ícone */
+}
+
+#back-to-top:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Leve cor ao passar o mouse */
+}
+
+
+#contact {
+    padding: 50px 0;
+    background-color: #1e1e1e;
+    color: #FFF;
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-card {
+    background-color: #2D2D2D;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    perspective: 1000px; /* Para o efeito de flip */
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-card i {
+    font-size: 3em; /* Tamanho do ícone */
+    color: #BB86FC; /* Cor do ícone */
+    margin-bottom: 10px; /* Espaçamento abaixo do ícone */
+}
+
+.contact-card h3 {
+    margin: 10px 0;
+    color: #03DAC6; /* Cor do título */
+}
+
+.contact-card p {
+    margin: 5px 0;
+}
+
+.contact-card a {
+    color: #BB86FC;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-card a:hover {
+    color: #03DAC6; /* Cor do link ao passar o mouse */
+}
